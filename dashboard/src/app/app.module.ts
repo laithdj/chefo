@@ -13,12 +13,12 @@ import { ErrorModule } from './views/errors/error.module';
 import { Map1Component } from './views/maps/map1/map1.component';
 import { ModalsComponent } from './views/modals/modals.component';
 import { BasicTableComponent } from './views/tables/basic-table/basic-table.component';
-import { Profile1Component } from './views/profile/profile1/profile1.component';
 import { NotFoundComponent } from './views/errors/not-found/not-found.component';
 import { Dashboard1Component } from './views/dashboards/dashboard1/dashboard1.component';
 
 // main layout
 import { NavigationModule } from './main-layout/navigation/navigation.module';
+import { CoursesComponent } from './views/courses/courses/courses.component';
 
 const routes: Route[] = [
   { path: '', pathMatch: 'full', redirectTo: 'dashboards/v1' },
@@ -27,9 +27,9 @@ const routes: Route[] = [
       { path: 'v1', component: Dashboard1Component },
     ]
   },
-  { path: 'profiles', children:
+  { path: 'courses', children:
     [
-      { path: 'profile1', component: Profile1Component },
+      { path: 'courses', component: CoursesComponent },
     ]
   },
   { path: 'tables', children:
